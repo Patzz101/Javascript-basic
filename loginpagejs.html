@@ -3,48 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>loginpages js</title>
 </head>
 <body>
-    <!--แบบฝึกหัด login pop-up page -->
+    <!--แบบฝึกหัด login pop-up page 
+        ให้เขียนระบบ login
+        -ให้ใช้ prompt ในการถามใครเป็นคนlogin
+        -ถ้าผู้ใช้กรอกว่า "Admin" ให้ใช้ prompt ถาม password
+            - วิธีเช็ค Password
+            - ถ้า string นั้นเป็น "codecamp#5" ให้ alert "ยินดีต้อนรับ"
+            - ถ้า string เป็นอย่างอื่นให้ alert เป็น "Wrong password"
+            - ถ้าเป็น string ว่างหรือกด cancel ให้ alert ว่า "ยกเลิก"
+        -ถ้าผู้ใช้กรอกอย่างอื่นที่ไม่ใช่ "Admin" ให้ alert ว่า "ผมไม่รู้จักคุณ"
+        -ถ้าผู้ใช้กรอก input เป็น string ว่าง หรือกด Esc ให้ alert ว่า "ยกเลิก"-->
 </body>
-<script>const begin = prompt(" Who are you ?")
-    if(begin == "admit")
+    <script>
+    let begin = prompt(" Who are you ?");
+    begin2 = begin;
+    if(begin ==  '' || begin == null)
     {
-    
-         begin2 = prompt("Enter password")
+        alert('Error');
+        
     }
-      else{
-        alert(" I don't know you")
-        alert("Cancel")
+    if(begin2 =='Admit'){
+        let password1 =prompt('password');
+        begin3 = password1;
+    }
+    if(begin3 == 'Codecamp5'){
+        alert('Welcome')
+    }
+      else if(begin3 == ''|| begin3 == null){
+          alert("Cancel")
+
       }
-         if(begin2 == "Codecamp#5"){
-    
-            alert("Welcome")
-         }
-    else{
-    
-        alert("Wrong password")
-        alert("Cancel")
-    }
-        
-     
-    
-    let x = prompt("who are you ?")
-    if(x == "Admit")
-    let x2 =prompt("Enter password")
-    
-    else{
-        alert("i don't know you") 
-        
-    }
-    if(x2== "codecamp#5"){
-    
-        alert("Welcome")
-    }
-    
-    else{
-    
-        alert('Wrong password')
-    }</script>
+     else{
+         alert("I don't know you" )
+     }
+    </script>
 </html>
